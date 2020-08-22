@@ -24,7 +24,7 @@ public class OperatorsStatements {
 	int num3=6;
 	int num4=11;
 	if(num1 >=10 && num2>=10) {
-		
+		  
 		System.out.println("los número son mayores a 10");
 	}
 		
