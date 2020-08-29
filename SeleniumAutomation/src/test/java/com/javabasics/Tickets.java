@@ -15,6 +15,17 @@ public class Tickets {
 		edad = edadPersona;
 		estudiante = credencialEstudiante;
 	}
+	
+
+	public Tickets(int precioNormal, int edadPersona, boolean credencialEstudiante, int descuento) { //Instancias dentro del constructor, los datos que le coloque son los que va ha reaccionar el sistema como parámetros
+		precioAdulto = precioNormal - descuento;
+		precioNino = (precioNormal*(.85))- descuento;
+		precioEstudiante = (precioNormal *(.5)) - descuento;
+		costo = "Precio Normal con descuento";
+		edad = edadPersona;
+		estudiante = credencialEstudiante;
+	}
+	
 	//Métodos
 	
 	public void costoDia() {
@@ -65,13 +76,16 @@ public class Tickets {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Tickets tickets = new Tickets(100, 19,true);// El primer Tickets es la clase, el segundo es una variable de tipo constructor por eso se le pone igual new y nombre del constructor
+		Tickets tickets = new Tickets(100, 19,true,3);// El primer Tickets es la clase, el segundo es una variable de tipo constructor por eso se le pone igual new y nombre del constructor
+			
+		
 			tickets.costoDia();
 			tickets.precioAdulto();
 			tickets.precioNino();
 			tickets.precioEstudiante();
 			tickets.verificarcostoTicket();
 			tickets.sumarTicket(20,20);
+			
 	}
 
 }
